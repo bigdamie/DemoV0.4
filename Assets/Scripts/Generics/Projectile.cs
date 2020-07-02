@@ -16,6 +16,11 @@ public class Projectile : Movement3D
     private void FixedUpdate()
     {
         Motion(dir);
+
+        lifeSpan -= Time.fixedDeltaTime;
+
+        if (lifeSpan <= 0)
+            Destroy(this.gameObject);
     }
 
 }
