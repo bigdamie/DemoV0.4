@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beed4e87bce7ed648a5352f2e12491f3, type: 3}
+  m_Name: Item(1x1)
+  m_EditorClassIdentifier: 
+  currentAverageValue: 10
+  itemDescription: This is a 1x1 triangle.
+  itemType: Treasure
+  itemName: One by One
+  rarity: Common
+  itemSize: {x: 1, y: 1}
+  itemIcon: {fileID: 21300000, guid: 48cc4d91109972a4782f9ad2b6ea0792, type: 3}
+  trait: 
+  traitIcon: {fileID: 0}
+  thisItemsPrefab: {fileID: 8857592634141113693, guid: ff726a0a9bdad234a94ea371467a7569,
+    type: 3}

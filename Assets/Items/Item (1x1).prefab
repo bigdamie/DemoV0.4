@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8857592634141113689}
   - component: {fileID: 8857592634141113688}
-  - component: {fileID: 8857592634141113695}
+  - component: {fileID: 8649138327032716257}
   - component: {fileID: 8857592634141113694}
   m_Layer: 0
   m_Name: Item (1x1)
@@ -46,7 +46,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8857592634141113695
+--- !u!114 &8649138327032716257
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,19 +55,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8857592634141113693}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: beed4e87bce7ed648a5352f2e12491f3, type: 3}
+  m_Script: {fileID: 11500000, guid: fd04e15b03678f443b8b00ee37ec1852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentAverageValue: 10
-  itemDescription: This is the best item in the game.
-  itemType: Rigbert
-  itemName: Ultima Weapon
-  rarity: Common
-  itemSize: {x: 1, y: 1}
-  itemIcon: {fileID: 21300000, guid: 48cc4d91109972a4782f9ad2b6ea0792, type: 3}
-  trait: This is trait
-  traitIcon: {fileID: 0}
-  thisItemsPrefab: {fileID: 8857592634141113693}
+  thisItem: {fileID: 11400000, guid: 4e8cd573937c7c14db7a392147aed246, type: 2}
 --- !u!212 &8857592634141113694
 SpriteRenderer:
   m_ObjectHideFlags: 0

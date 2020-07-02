@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSize: 1
   thisInventory:
-  - {fileID: 8857592634141113695, guid: ff726a0a9bdad234a94ea371467a7569, type: 3}
+  - {fileID: 11400000, guid: 4e8cd573937c7c14db7a392147aed246, type: 2}

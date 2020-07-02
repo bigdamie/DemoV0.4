@@ -27,7 +27,7 @@ public class InventoryManager : MonoBehaviour
 
     public bool AddItemInOpenSpace(GameObject newItemPrefab)
     {
-        Item newItem = newItemPrefab.GetComponent<Item>();
+        Item newItem = newItemPrefab.GetComponent<ItemObj>().thisItem;
 
         int contX = (int)newItem.itemSize.x;
         int contY = (int)newItem.itemSize.y;
@@ -96,6 +96,11 @@ public class InventoryManager : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    public void RemoveItem(InvItemShell itemSlot)
+    {
+        heldItems.Remove(itemSlot);
     }
 
 }

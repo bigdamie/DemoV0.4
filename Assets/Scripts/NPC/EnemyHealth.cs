@@ -26,5 +26,5 @@ public class EnemyHealth : Health
         
         this.transform.parent.gameObject.SetActive(false);
     }
-
+    //fuck you damie
 }

@@ -7,7 +7,7 @@ using UnityEngine;
 //can have their own scripts
 public class InteractionTrigger : MonoBehaviour
 {
-    Item itemOnFloor = null;
+    ItemObj itemOnFloor = null;
     DisplayCase display = null;
 
     PauseManager pMan = null;
@@ -21,7 +21,7 @@ public class InteractionTrigger : MonoBehaviour
     {
         if(other.CompareTag("Item"))
         {
-            itemOnFloor = other.GetComponent<Item>();
+            itemOnFloor = other.GetComponent<ItemObj>();
         }
 
         else if(other.CompareTag("OpenInventory"))
