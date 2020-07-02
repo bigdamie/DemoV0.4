@@ -8,9 +8,9 @@ public class DisplayCase : Interactable
     [SerializeField] InvUIManager invUIman;
     [SerializeField] InventoryManager invMan;
 
-    [SerializeField] AllDisplays allDisplays;
     [SerializeField] ParticleSystem particles;
     [SerializeField] Inventory displayedItem;
+    DisplayCaseManager displayMan;
 
     [SerializeField] PlayerInventory playerInventory;
     SpriteRenderer sprend;
@@ -19,8 +19,10 @@ public class DisplayCase : Interactable
     private void Start()
     {
         sprend = GetComponentInChildren<SpriteRenderer>();
+        displayMan = GetComponentInParent<DisplayCaseManager>();
         invUIman = FindObjectOfType<InvUIManager>();
         invMan = FindObjectOfType<InventoryManager>();
+        stay = true;
 
         DisplayItem();
     }
@@ -30,6 +32,7 @@ public class DisplayCase : Interactable
 
         if (other.CompareTag(otherTag))
         {
+            displayMan.currDisplay = this;
             particles.gameObject.transform.position = transform.position + new Vector3(0, 1, 0);
             particles.Play();
         }
@@ -41,6 +44,8 @@ public class DisplayCase : Interactable
 
         if (other.CompareTag(otherTag))
         {
+            displayMan.currDisplay = null;
+
             particles.Stop();
         }
     }
@@ -51,19 +56,22 @@ public class DisplayCase : Interactable
         {
             if(displayedItem.thisInventory.Count > 0)
             {
-                playerInventory.AddItem(displayedItem.thisInventory[0].GetComponent<Item>());
+                Item newItem = displayedItem.thisInventory[0];
 
-                takeItem = invMan.AddItemInOpenSpace(displayedItem.thisInventory[0].thisItemsPrefab);
+                takeItem = invMan.AddItemInOpenSpace((newItem.thisItemsPrefab));
 
                 displayedItem.RemoveItem(displayedItem.thisInventory[0]);
+
+                myNotification.Raise();
             }
 
             displayedItem.AddItem(invUIman.currItemShell?.item);
-            playerInventory.RemoveItem(displayedItem.thisInventory[0].GetComponent<Item>());
+            playerInventory.RemoveItem(invUIman.currItemShell?.item);
         }
 
         if (displayedItem.thisInventory.Count > 0)
-        sprend.sprite = displayedItem.thisInventory[0].itemIcon;
+        sprend.sprite = displayedItem.thisInventory[0]?.itemIcon;
+
 
     }
 }

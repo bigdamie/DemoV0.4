@@ -60,6 +60,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -215,6 +216,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -374,6 +376,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -423,6 +426,7 @@ GameObject:
   - component: {fileID: 6561413129098012144}
   - component: {fileID: 6561413129098012159}
   - component: {fileID: 6561413129098012158}
+  - component: {fileID: 9092643507645103550}
   - component: {fileID: 6561413129098012145}
   m_Layer: 0
   m_Name: Resume Button
@@ -474,6 +478,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -487,6 +492,34 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &9092643507645103550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6561413129098012147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1155805a22682854cb1d6d6d45369cbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6561413129233696180}
+        m_MethodName: ResumeButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  myNotifications:
+  - {fileID: 11400000, guid: 833f619d3c51c5649aa1c2b216c87426, type: 2}
 --- !u!114 &6561413129098012145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -603,6 +636,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -785,6 +819,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tweenTime: 0
   tweenDelay: 0
+  offScreen: {x: 0, y: 0}
+  pausePos: {x: 0, y: 0}
+  invPos: {x: 0, y: 0}
   isPaused: 0
   pauseMenu: {fileID: 6561413129063724710}
   inventoryMenu: {fileID: 5339286204999812788}
@@ -848,6 +885,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1062,15 +1100,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce67707c4cb0b37459b8f62a02eddf18, type: 3}
---- !u!1 &5339286204999812788 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5342861336618730020, guid: ce67707c4cb0b37459b8f62a02eddf18,
-    type: 3}
-  m_PrefabInstance: {fileID: 17271748038509712}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &3465285663042400 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 13813407354580976, guid: ce67707c4cb0b37459b8f62a02eddf18,
+    type: 3}
+  m_PrefabInstance: {fileID: 17271748038509712}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5339286204999812788 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5342861336618730020, guid: ce67707c4cb0b37459b8f62a02eddf18,
     type: 3}
   m_PrefabInstance: {fileID: 17271748038509712}
   m_PrefabAsset: {fileID: 0}

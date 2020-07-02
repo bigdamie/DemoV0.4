@@ -6,6 +6,7 @@ public class Interactable : MonoBehaviour
 {
 
     [SerializeField] public bool playerInRange;
+    public bool stay = false;
     [SerializeField] public string otherTag;
 	[SerializeField] public Notification myNotification;
 
