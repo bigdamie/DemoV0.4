@@ -58,11 +58,12 @@ public class DisplayCase : Interactable
             {
                 Item newItem = displayedItem.thisInventory[0];
 
-                takeItem = invMan.AddItemInOpenSpace((newItem.thisItemsPrefab));
+                takeItem = invMan.AddItemInOpenSpace(newItem.thisItemsPrefab);
 
+              
                 displayedItem.RemoveItem(displayedItem.thisInventory[0]);
 
-                myNotification.Raise();
+                myNotification.Raise();              
             }
 
             displayedItem.AddItem(invUIman.currItemShell?.item);

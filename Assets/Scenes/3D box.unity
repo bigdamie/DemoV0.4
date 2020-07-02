@@ -7748,6 +7748,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Log Ranged
       objectReference: {fileID: 0}
+    - target: {fileID: 4410527156496699832, guid: df3ecd58dc23b0444aae04135371e72d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4410527156496699835, guid: df3ecd58dc23b0444aae04135371e72d,
         type: 3}
       propertyPath: m_LocalPosition.x

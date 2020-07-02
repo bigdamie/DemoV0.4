@@ -15,7 +15,7 @@ public class InventoryManager : MonoBehaviour
     Vector2 cellSize = new Vector2(32f,32f);
 
     public InvItemShell slotPrefab;
-
+     
     public List<Vector2> inventoryPositions = new List<Vector2>();
 
     private void Start()
@@ -42,7 +42,7 @@ public class InventoryManager : MonoBehaviour
                     for (int sizeY = 0; sizeY < contY; sizeY++) // item size in Y
                     {
                         for (int sizeX = 0; sizeX < contX; sizeX++)//item size in X
-                        {
+                            {
                             if ((i + sizeX) < maxGridX && (j + sizeY) < maxGridY && grid[i + sizeX, j + sizeY] != 1)//inside of index
                             {
                                 Vector2 pos;
@@ -69,6 +69,7 @@ public class InventoryManager : MonoBehaviour
             InvItemShell myInvItem = Instantiate(slotPrefab);
 
             myInvItem.startPosition = new Vector2(inventoryPositions[0].x, inventoryPositions[0].y); //1st position
+            //myInvItem.startPosition = inventoryPositions[0];
             myInvItem.item = newItem;
             myInvItem.icon.sprite = newItem.itemIcon;
 
@@ -101,6 +102,15 @@ public class InventoryManager : MonoBehaviour
     public void RemoveItem(InvItemShell itemSlot)
     {
         heldItems.Remove(itemSlot);
+       
+        for (int i = 0; i < itemSlot.item.itemSize.y; i++) //through item Y
+        {
+            for (int j = 0; j < itemSlot.item.itemSize.x; j++) //through item X
+            {
+                grid[(int)itemSlot.startPosition.x + j, (int)itemSlot.startPosition.y + i] = 0; //clean old pos
+
+            }
+        }
     }
 
 }
