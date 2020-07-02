@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour
+[CreateAssetMenu(menuName ="New Item")]
+public class Item : ScriptableObject
 {
 
     public float currentAverageValue;
@@ -24,17 +25,5 @@ public class Item : MonoBehaviour
 
     [SerializeField] public GameObject thisItemsPrefab; //This is what actually gets put into inventories
 
-    public void GetItem()
-    {
-       
-        InventoryManager invMan = FindObjectOfType<InventoryManager>();
-
-        bool pickedUpItem = invMan.AddItemInOpenSpace(thisItemsPrefab); //add to the bag matrix.
-
-        if (pickedUpItem)
-        {
-            Destroy(this.gameObject);
-        }
-        
-    }
+   
 }

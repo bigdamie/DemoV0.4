@@ -56,7 +56,6 @@ MonoBehaviour:
   startPosition: {x: 0, y: 0}
   oldPosition: {x: 0, y: 0}
   icon: {fileID: 4339688925755010051}
-  thisItemsPrefab: {fileID: 0}
 --- !u!225 &764872692865488496
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -129,6 +128,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -154,7 +154,6 @@ GameObject:
   - component: {fileID: 7620417318774366990}
   - component: {fileID: 6526130835153112301}
   - component: {fileID: 5185019410439873411}
-  - component: {fileID: 6004595129185634712}
   - component: {fileID: 859792673311278337}
   m_Layer: 0
   m_Name: BG+Button
@@ -205,6 +204,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.8745098, g: 1, b: 0.8864454, a: 0.5019608}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -231,34 +231,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rightClick: {fileID: 11400000, guid: 833f619d3c51c5649aa1c2b216c87426, type: 2}
---- !u!114 &6004595129185634712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6194100342662030734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1155805a22682854cb1d6d6d45369cbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5185019410439873411}
-        m_MethodName: PlayerInRange
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  myNotifications:
-  - {fileID: 11400000, guid: 43de40c542e08824e9da693c627b7675, type: 2}
+  playerDisplayItem: 0
+  display: {fileID: 0}
 --- !u!114 &859792673311278337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,6 +337,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []

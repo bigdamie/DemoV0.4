@@ -31,7 +31,7 @@ public class PauseManager : MonoBehaviour
         isPaused = !isPaused;
         if (isPaused)
         {
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
 
             inventoryMenu.transform.position = offScreen;
             pauseMenu.transform.position = pausePos;
@@ -41,7 +41,7 @@ public class PauseManager : MonoBehaviour
         }
         else
         {
-            Time.timeScale = 1;
+            //Time.timeScale = 1;
 
             if (inventoryMenu.alpha == 1)
                 FadeOutTextbox(inventoryMenu);
