@@ -278,6 +278,9 @@ MonoBehaviour:
   attackRadius: 0
   anim: {fileID: 4410527156928560704}
   myState: {fileID: 4410527156530423805}
+  projectile: {fileID: 0}
+  timeBtwnShoot: 0.5
+  timer: 0
 --- !u!1 &4410527157477667261
 GameObject:
   m_ObjectHideFlags: 0
